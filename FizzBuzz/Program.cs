@@ -6,36 +6,44 @@ namespace FizzBuzz
     {
         static void Main(string[] args)
         {
-         int value = RunProgram();
-         int input = int.Parse(Console.ReadLine());
-        
-        }
+            int x = 0;
+            int y = 0;
+            int z = 0;
 
-        static int RunProgram()
-        {
-            for(int i = 0; i<1000; i++)
+         for(int i = 0; i<=1000; i++)
             {
-                if(i % 3 == 0)
+                if(i % 3 == 0 && i % 5 != 0)
                 {
-                    int f = System.Console.WriteLine("Fizz");
-                    return f;
-                    
+                    System.Console.WriteLine("Fizz");
+                    x++;
                 }
-                else if(i % 5 == 0)
+                else if(i % 5 == 0 && i % 3 != 0)
                 {
-                   int b = System.Console.WriteLine("Buzz");
-                   return b;
-                    
+                  System.Console.WriteLine("Buzz");
+                    y++;
                 }
-                else if(i % 3 == 0 && i % 5 ==0)
+                else if((i % 3 == 0) && (i % 5 ==0))
                 {
-                    int fb = System.Console.WriteLine("FizzBuzz");
-                     return fb;
+                    System.Console.WriteLine("FizzBuzz");
+                    z++;
 
+                }
+                else
+                {
+                    System.Console.WriteLine(i);
                 }
 
             }
+
+            System.Console.WriteLine("There are " + x + " Fizzes"); // 267 Fizzes
+            System.Console.WriteLine("There are " + y + " Buzzes"); // 134 Buzzes
+            System.Console.WriteLine("There are " + z + " FizzBuzzes"); //67 FizzBuzzes
+
+            
+        
         }
+
+        
 
         
 
